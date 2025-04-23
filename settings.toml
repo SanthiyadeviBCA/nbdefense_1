@@ -124,3 +124,4 @@ accepted_licenses = [
 [plugins."nbdefense.plugins.CVEDependencyFilePlugin"]
 enabled = true
 trivy_binary_path = "C:\\Users\\santhiya\\Documents\\nbdefense\\trivy.exe"
+exit_code_on_vulnerabilities = true
