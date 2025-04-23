@@ -1,8 +1,12 @@
 repos:
   - repo: local
     hooks:
-      - id: nbdefense-scan
-        name: NBDefense Repository Scan
-        entry: nbdefense scan .
+      - id: nbdefense
+        name: NBDefense vulnerability scan
+        entry: nbdefense scan --dir .
         language: system
-        pass_filenames: false
+        files: \.ipynb$
+
+     
+
+
