@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: nbdefense-scan
+        name: NBDefense Repository Scan
+        entry: nbdefense scan .
+        language: system
+        pass_filenames: false
