@@ -1,0 +1,10 @@
+
+ ERROR   Unspecified Error (SNYK-CLI-0000)
+                                                                                        
+           Could not find package.json at                                               
+           C:\Users\santhiya\Documents\nbdefense_1\package.json (lockfile found at      
+           package-lock.json)                                                           
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0000 
+                                                                         
+ID:      urn:snyk:interaction:a180abec-5d75-4f59-8e7c-d7a9390e8d50 
