@@ -13,6 +13,7 @@ repos:
     hooks:
       - id: nbdefense-scan
         name: NB Defense Scan
-        entry: nbdefense scan .
+        entry: nbdefense scan --path .
         language: system
-        types: [jupyter]
+        types: [jupyter, python, yaml, toml, json]
+
