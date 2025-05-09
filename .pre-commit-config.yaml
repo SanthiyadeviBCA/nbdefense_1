@@ -13,7 +13,6 @@ repos:
     hooks:
       - id: nbdefense-scan
         name: NB Defense Scan
-        entry: nbdefense scan --path . --settings settings.toml
+        entry: nbdefense scan .
         language: system
         types: [jupyter]
-        files: \.ipynb$
