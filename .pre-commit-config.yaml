@@ -13,6 +13,6 @@ repos:
     hooks:
       - id: nbdefense-scan
         name: NB Defense Scan
-        entry: python -c "import os; os.system('nbdefense scan --path .')"
+        entry: nbdefense scan --path . --settings settings.toml
         language: system
         types: [jupyter]
