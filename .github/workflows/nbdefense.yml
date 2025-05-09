@@ -1,0 +1,43 @@
+name: 🛡️ NBDefense Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  nbdefense:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install NBDefense
+        run: pip install nbdefense
+
+      - name: Run NBDefense scan
+        run: |
+          nbdefense scan \
+            --config settings.toml \
+            --format sarif \
+            --output nbdefense.sarif
+
+      - name: Upload SARIF results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: nbdefense.sarif
+
+      - name: Fail on HIGH/CRITICAL vulnerabilities
+        run: |
+          if nbdefense stats --config settings.toml | grep -E "HIGH|CRITICAL"; then
+            echo "HIGH/CRITICAL vulnerabilities found—blocking this push!"
+            exit 1
+          else
+            echo "No HIGH/CRITICAL vulnerabilities."
+          fi

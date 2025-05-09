@@ -1,0 +1,18 @@
+# repos:
+#   - repo: https://github.com/OWASP/nbdefense.git
+#     rev: v1.0.0  # Use the correct version or tag
+#     hooks:
+#       - id: nbdefense
+#         name: NBDefense vulnerability scan
+#         files: \.ipynb$  # Ensure it scans .ipynb files
+
+
+
+repos:
+  - repo: local
+    hooks:
+      - id: nbdefense-scan
+        name: NB Defense Scan
+        entry: python -c "import os; os.system('nbdefense scan --path .')"
+        language: system
+        types: [jupyter]
