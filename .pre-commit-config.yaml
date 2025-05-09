@@ -40,4 +40,12 @@ repos:
         "jinja2==3.1.2"
       ]
 
-
+repos:
+  - repo: local
+    hooks:
+      - id: nbdefense-local
+        name: NBDefense local scan
+        entry: python .nbdefense-local-hook/nbdefense_hook.py
+        language: system
+        types: [jupyter]
+        files: \.ipynb$
