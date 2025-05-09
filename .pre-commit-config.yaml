@@ -15,4 +15,5 @@ repos:
         name: NB Defense Scan
         entry: nbdefense scan --path . --settings settings.toml
         language: system
-        types: [jupyter]
+        types: [jupyter]  # This ensures it only scans .ipynb files
+        files: \.ipynb$   # Match only .ipynb files
