@@ -53,6 +53,6 @@ repos:
     hooks:
       - id: nbdefense
         name: nbdefense scan
-        entry: nbdefense scan
+        entry: bash -c 'for file in "$@"; do nbdefense scan "$file"; done' --
         language: system
         files: \.(ipynb|py)$
