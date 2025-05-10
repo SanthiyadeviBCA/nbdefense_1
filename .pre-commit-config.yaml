@@ -55,6 +55,6 @@ repos:
         name: nbdefense scan
         entry: nbdefense scan
         language: system
-        types: [python, jupyter]
-        files: \.(py|ipynb)$
+        types: [file]
+        files: \.(ipynb|py)$
 
