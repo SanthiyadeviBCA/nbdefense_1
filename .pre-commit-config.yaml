@@ -47,12 +47,13 @@
 #          name: NBDefense vulnerability scan
 #          files: \.ipynb$  # Ensure it scans .ipynb files
 
-
 repos:
   - repo: local
     hooks:
       - id: nbdefense
         name: nbdefense scan
-        entry: bash -c 'for file in "$@"; do nbdefense scan "$file"; done' --
+        entry: python -c "import sys, os; [os.system(f'nbdefense scan \"{f}\"') for f in sys.argv[1:]]"
         language: system
+        types: [file]
         files: \.(ipynb|py)$
+
