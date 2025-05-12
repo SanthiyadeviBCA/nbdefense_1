@@ -55,5 +55,5 @@ repos:
         entry: python -c "import sys, os; [os.system(f'nbdefense scan \"{f}\"') for f in sys.argv[1:]]"
         language: system
         types: [file]
-        files: \.(ipynb|py)$
+        files: \.(ipynb|py|html)$
 
