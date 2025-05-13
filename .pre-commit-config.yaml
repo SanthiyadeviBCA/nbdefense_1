@@ -1,0 +1,43 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.8.3
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: 2.1.2
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+      - id: mypy
+        args: ["--ignore-missing-imports", "--strict", "--check-untyped-defs"]
+        additional_dependencies:
+          - types-requests==2.28.11.15
+          - types-tqdm==4.65.0.0
+          - pytest==7.1.3
+          - types-setuptools==67.6.0.5
+          - click==8.1.3
+          - nbformat==5.6.1
+          - tomlkit==0.11.6
+          - jinja2==3.1.2
+
+  - repo: https://github.com/trufflesecurity/nbdefense.git
+    rev: v0.6.1
+    hooks:
+      - id: nbdefense-scan
+        name: NBDefense Repository Scan
+        entry: nbdefense scan --config settings.toml
+        language: system
+        files: .*
+        pass_filenames: false

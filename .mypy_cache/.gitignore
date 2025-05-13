@@ -1,0 +1,12 @@
+# Automatically created by mypy
+# Ignore Python cache and checkpoints
+__pycache__/
+.ipynb_checkpoints/
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
