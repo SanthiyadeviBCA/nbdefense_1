@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "black-background": "#151515",
+
+            "critical-base": "#D01100",
+            "critical-background": "#FFFBFA",
+            "critical-border": "#FDA29B",
+
+            "high-base": "#ED6A5E",
+            "high-background": "#FFFBFA",
+            "high-border": "#FDA29B",
+
+            "medium-base": "#F4BD4F",
+            "medium-background": "#FFFDF8",
+            "medium-border": "#EFE1BC",
+
+            "low-base": "#07B6CE",
+            "low-background": "#E8FCFF",
+            "low-border": "#009AAE",
+
+            "none-background": "#F5F5F5",
+            "none-border": "#E0E0E0",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .modal-button {
+      background: linear-gradient(#050f20, #050f20) padding-box,
+        linear-gradient(rgba(208, 213, 221, 1), rgba(208, 213, 221, 0.4)) border-box;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    dialog::backdrop {
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      background: rgba(3, 10, 27, 0.7);
+    }
+  </style>
+
+  <title>NB Defense Report</title>
+</head>
+
+<body>
+  <div class="bg-black-background absolute h-72 w-full text-white z-0">
+    <nav class="w-100 border-b-[1px] border-[#2D2D2D]">
+  <div class="flex flex-row max-w-4xl m-auto h-14 items-center">
+    <p class="inline-block ml-2">NB Defense Scan Results</p>
+    <div class="ml-auto flex items-center">
+      <a
+        href="https://nbdefense.ai"
+        target="_blank"
+        rel="noreferrer"
+        >Docs</a
+      >
+    </div>
+  </div>
+</nav>
+  </div>
+  <div class="max-w-4xl m-auto relative z-10 top-14 flex flex-col">
+    <div class="text-white mt-14 mb-6 h-14 flex flex-row">
+      <div class="flex flex-col">
+        <div class="text-sm font-thin">
+          C:\Users\Santhiya Devi\Documents\
+        </div>
+        <div class="text-3xl font-bold">
+          nbdefense\
+        </div>
+      </div>
+      <div class="ml-auto">
+        <button id="filesScannedButton" class="border border-[transparent] rounded-lg modal-button mr-2">View
+          files scanned</button>
+      </div>
+    </div>
+
+    <div
+  class="grid grid-cols-8 h-35 bg-white border-solid border-1 border-[#D8D8D8] rounded-md shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+  <div class="col-span-2 p-8">
+    <h3 class="text-sm font-thin">Files</h3>
+    <span class="text-3xl font-bold">5</span>
+  </div>
+  <div class="col-span-2 p-8">
+    <h3 class="text-sm font-thin">Checks ran</h3>
+    <span class="text-3xl font-bold">10</span>
+  </div>
+  <div class="col-span-4 p-8">
+    <h3 class="text-sm font-thin">Scanned at</h3>
+    <span class="text-3xl font-bold">May 13, 2025 &middot; 01:15 PM</span>
+  </div>
+</div>
+
+    
+
+    <div>
+  <h3 class="text-lg font-bold mt-6">All issues</h3>
+  
+    <div class="flex flex-row items-center">
+      <span
+        class="rounded-md bg-critical-base text-white text-center h-6 w-6"
+        >21</span
+      >
+      <h2 class="text-2xl font-bold ml-2">Critical</h2>
+    </div>
+     
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-42005"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-42005</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.8, 4.2.15</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins-checkpoint.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins-checkpoint.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins-checkpoint.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins-checkpoint.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>AWS Access Key</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>AWS Access Key</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Base64 High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Base64 High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Base64 High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>GitHub Token</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #2</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4"># Secrets Test Section
+api_key = &#34;AK..LE&#34;
+GITHUB_TOKEN = &#34;gh..CD&#34;
+GOOGLE_API_KEY = &#34;AI..UV&#34;
+STRIPE_SECRET_KEY = &#34;sk..dc&#34;
+STRIPE_SECRET_KEY = &#34;sk_test_4eC39HqLyjWDarjtT1zdp7dc&#34;
+
+password = &#34;su..23&#34;
+secret_token = &#34;gh..en&#34;
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-cve.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Hex High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">import [PII]
+import matplotlibXtns
+client_secret = &#34;e2..9a&#34;
+print(&#34;output&#34;)</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-cve.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">import [PII]
+import matplotlibXtns
+client_secret = &#34;e2..9a&#34;
+print(&#34;output&#34;)</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-cve.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Hex High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #1</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">&#39;e2..9a&#39;</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-license.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Hex High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">import [PII]
+import matplotlib.pyplot as plt
+client_secret = &#34;e2..9a&#34;
+print(client_secret)
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-license.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Secret Keyword</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">import [PII]
+import matplotlib.pyplot as plt
+client_secret = &#34;e2..9a&#34;
+print(client_secret)
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">Secrets</h3>
+  <p class="mt-4">Path: test-license.ipynb</p>
+  <p>Vulnerability: Exposed Secret</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Hex High Entropy String</p>
+  <p class="mt-4">
+    <b>Location</b>: cell 
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #1</p>
+    </div>
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">&#39;e2..9a&#39;</span>
+    </div>
+  </div>
+</div>
+</div>
+       
+    
+  
+    <div class="flex flex-row items-center">
+      <span
+        class="rounded-md bg-high-base text-white text-center h-6 w-6"
+        >11</span
+      >
+      <h2 class="text-2xl font-bold ml-2">High</h2>
+    </div>
+     
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2023-50782"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2023-50782</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>cryptography</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>41.0.7</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>42.0.0</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-26130"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-26130</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>cryptography</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>41.0.7</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>42.0.4</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-38875"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-38875</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>4.2.14, 5.0.7</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-39330"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-39330</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.7, 4.2.14</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-39614"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-39614</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.7, 4.2.14</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-53908"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-53908</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.10, 5.1.4, 4.2.17</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2023-43804"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2023-43804</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>urllib3</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>1.26.9</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>2.0.6, 1.26.17</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">PII Found</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins-checkpoint.ipynb</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>A total of 2 PII found in cell number 1 with the following tag(s):</p>
+  <p>
+  <pre>{
+    "EMAIL_ADDRESS": 1,
+    "PERSON": 1
+}</pre>
+  </p>
+  <p class="mt-4">
+    <b>Location</b>: cell input
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #1</p>
+    </div>
+    <div class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]">
+      <span class="pl-4"># PII Test Section
+name = "[PII]"
+email = "[PII]"
+phone = "+1-800-123-4567"
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">PII Found</h3>
+  <p class="mt-4">Path: nbdefense_test_plugins.ipynb</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>A total of 2 PII found in cell number 1 with the following tag(s):</p>
+  <p>
+  <pre>{
+    "EMAIL_ADDRESS": 1,
+    "PERSON": 1
+}</pre>
+  </p>
+  <p class="mt-4">
+    <b>Location</b>: cell input
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #1</p>
+    </div>
+    <div class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]">
+      <span class="pl-4"># PII Test Section
+name = "[PII]"
+email = "[PII]"
+phone = "+1-800-123-4567"
+</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">PII Found</h3>
+  <p class="mt-4">Path: test-cve.ipynb</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>A total of 1 PII found in cell number 0 with the following tag(s):</p>
+  <p>
+  <pre>{
+    "PERSON": 1
+}</pre>
+  </p>
+  <p class="mt-4">
+    <b>Location</b>: cell input
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]">
+      <span class="pl-4">import [PII]
+import matplotlibXtns
+client_secret = "e2..9a"
+print("output")</span>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-high-background border-solid border border-high-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7746)">
+    <path
+      d="M9.99999 6.66669V10M9.99999 13.3334H10.0083M18.3333 10C18.3333 14.6024 14.6024 18.3334 9.99999 18.3334C5.39762 18.3334 1.66666 14.6024 1.66666 10C1.66666 5.39765 5.39762 1.66669 9.99999 1.66669C14.6024 1.66669 18.3333 5.39765 18.3333 10Z"
+      stroke="#D92D20" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7746">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  <h3 class="font-bold">PII Found</h3>
+  <p class="mt-4">Path: test-license.ipynb</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>A total of 1 PII found in cell number 0 with the following tag(s):</p>
+  <p>
+  <pre>{
+    "PERSON": 1
+}</pre>
+  </p>
+  <p class="mt-4">
+    <b>Location</b>: cell input
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #0</p>
+    </div>
+    <div class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]">
+      <span class="pl-4">import [PII]
+import matplotlib.pyplot as plt
+client_secret = "e2..9a"
+print(client_secret)
+</span>
+    </div>
+  </div>
+</div>
+</div>
+       
+    
+  
+    <div class="flex flex-row items-center">
+      <span
+        class="rounded-md bg-medium-base text-white text-center h-6 w-6"
+        >15</span
+      >
+      <h2 class="text-2xl font-bold ml-2">Medium</h2>
+    </div>
+     
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-0727"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-0727</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>cryptography</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>41.0.7</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>42.0.2</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://github.com/advisories/GHSA-h4gh-qq45-vh27"
+      target="_blank"
+      rel="noreferrer"
+      >GHSA-h4gh-qq45-vh27</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>cryptography</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>41.0.7</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>43.0.1</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-39329"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-39329</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.7, 4.2.14</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-41989"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-41989</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.8, 4.2.15</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-41990"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-41990</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.8, 4.2.15</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-41991"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-41991</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.0.8, 4.2.15</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-45230"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-45230</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.1.1, 5.0.9, 4.2.16</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-45231"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-45231</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.1.1, 5.0.9, 4.2.16</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-53907"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-53907</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.1.4, 4.2.17, 5.0.10</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-56374"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-56374</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>5.1.5, 5.0.11, 4.2.18</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2025-26699"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2025-26699</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>4.2.20, 5.0.13, 5.1.7</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2025-32873"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2025-32873</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>django</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>4.2.11</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>4.2.21, 5.1.9, 5.2.1</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-35195"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-35195</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>requests</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>2.31.0</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>2.32.0</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2023-45803"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2023-45803</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>urllib3</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>1.26.9</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>2.0.7, 1.26.18</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        
+        <div
+  class="bg-medium-background border-solid border border-medium-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_7853)">
+    <path
+      d="M9.99999 6.66666V9.99999M9.99999 13.3333H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
+      stroke="#7C5200" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_7853">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
+  </div>
+  <div class="w-full">
+  
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: requirements.txt</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="https://avd.aquasec.com/nvd/cve-2024-37891"
+      target="_blank"
+      rel="noreferrer"
+      >CVE-2024-37891</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>urllib3</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>1.26.9</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>1.26.19, 2.2.2</p>
+    </div>
+  </div>
+</div>
+</div>
+       
+    
+  
+    <div class="flex flex-row items-center">
+      <span
+        class="rounded-md bg-low-base text-white text-center h-6 w-6"
+        >0</span
+      >
+      <h2 class="text-2xl font-bold ml-2">Low</h2>
+    </div>
+     
+      <div
+  class="bg-none-background border-solid border border-none-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <h3>No issues were found at this severity level</h3>
+</div> 
+    
+  
+</div>
+
+    <dialog id="filesScannedDialog"
+  class="p-0 border border-solid border-[#D8D8D8] rounded-md shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+  <div class="p-4">
+    <div class="flex flex-row justify-between">
+      <h1 class="font-bold text-lg">Files scanned</h1>
+      <a id="filesScannedCloseButton" class="cursor-pointer flex items-center">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.5 7.5L7.5 17.5M7.5 7.5L17.5 17.5" stroke="black" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round" />
+</svg>
+      </a>
+    </div>
+    <ul class="md:mr-14">
+      
+      <li class="font-semibold text-xs mt-4">Requirements</li>
+      <ul class="text-sm font-mono">
+        
+        <li>C:\Users\Santhiya Devi\Documents\nbdefense\requirements.txt </li>
+        
+      </ul>
+      
+      <li class="font-semibold text-xs mt-4">Notebooks</li>
+      <ul class="text-sm font-mono">
+        
+        <li>C:\Users\Santhiya Devi\Documents\nbdefense\nbdefense_test_plugins-checkpoint.ipynb </li>
+        
+        <li>C:\Users\Santhiya Devi\Documents\nbdefense\nbdefense_test_plugins.ipynb </li>
+        
+        <li>C:\Users\Santhiya Devi\Documents\nbdefense\test-cve.ipynb </li>
+        
+        <li>C:\Users\Santhiya Devi\Documents\nbdefense\test-license.ipynb </li>
+        
+      </ul>
+      
+      <li class="font-semibold text-xs mt-4">Packages</li>
+      <ul class="text-sm font-mono">
+        
+        <li>urllib3==1.26.9 </li>
+        
+        <li>jinja2==3.1.6 </li>
+        
+        <li>pyyaml==6.0.1 </li>
+        
+        <li>django==4.2.11 </li>
+        
+        <li>flask==2.2.5 </li>
+        
+        <li>cryptography==41.0.7 </li>
+        
+        <li>requests==2.31.0 </li>
+        
+      </ul>
+      
+    </ul>
+  </div>
+</dialog>
+
+    <footer class="my-4">
+  <div>
+    <span class="text-muted">Powered by: <a href="https://protectai.com/" target="_blank" rel="noreferrer"
+        class="underline text-blue-600 hover:text-blue-800">Protect AI</a></span>
+  </div>
+</footer>
+
+    <script>
+  const filesScannedButton = document.getElementById('filesScannedButton');
+  const filesScannedDialog = document.getElementById('filesScannedDialog');
+  const filesScannedCloseButton = document.getElementById('filesScannedCloseButton');
+
+  filesScannedButton.addEventListener('click', () => {
+    if (typeof filesScannedDialog.showModal === 'function') {
+      filesScannedDialog.showModal();
+    }
+  });
+
+  // Allows click outside of dialog to close dialog
+  filesScannedDialog.addEventListener('click', () => {
+    filesScannedDialog.close();
+  });
+
+  // Add close button
+  filesScannedCloseButton.addEventListener('click', () => {
+    filesScannedDialog.close();
+  })
+
+  filesScannedDialog.firstElementChild.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+</script>
+</body>
