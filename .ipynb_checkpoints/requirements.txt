@@ -1,6 +1,6 @@
 numpy==1.24.3
 pandas==1.5.3
-requests==2.31.0
+requests==2.32.2
 matplotlib==3.7.2
 spacy-legacy==3.0.12
 cymem==2.0.6
