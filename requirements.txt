@@ -6,5 +6,5 @@ flask==2.2.5           # CVE-2018-1000656
 cryptography==41.0.7     # CVE-2018-10903
 
 
-requests==2.31.0  # MIT License
+requests==2.32.4  # MIT License
 
